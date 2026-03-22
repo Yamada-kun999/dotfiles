@@ -1,0 +1,102 @@
+@import url("file:///home/dude/.cache/wal/colors-waybar.css");
+
+
+* {
+    border: none;
+    font-family: "Roboto", "Symbol Nerd Font";
+    font-size: 15px;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
+    background: @background;
+    border-radius: 25px;
+}
+
+tooltip {
+  border: 1px solid #64727d;
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    transition: all 200ms ease-in-out;
+    font-weight: 600;
+    min-width: 30px;
+    padding: 0 5px;
+    margin: 0 2px;
+    color: @foreground;
+}
+
+#workspaces button.active {
+    background: @color10;
+    min-width: 50px;
+    font-weight: 800;
+    color: @background;
+    border-radius: 25px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#submap, #clock, #battery, #network, #backlight {
+    padding: 0 10px;
+    margin: 0 10px;
+    background-color: transparent;
+    color: @color11;
+    border: none;
+}
+
+#submap {
+    background: transparent;
+}
+
+#clock {
+    border-radius: 25px;
+    font-weight: 800;
+}
+
+#battery {
+    color: #48e748;
+    border-radius: 25px;
+    font-weight: 600;
+}
+#battery.charging {
+    border-radius: 25px;
+    font-weight: 600;
+}
+#battery.warning {
+    color: orange;
+    border-radius: 25px;
+    font-weight: 600;
+}
+#battery.critical {
+    color: red;
+    border-radius: 25px;
+    font-weight: 600;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: blink;
+    animation-duration: 0.5s;
+}
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #121212;
+    }
+}
+
+#network {
+    margin-right: 10px;
+    border-radius: 25px;
+    font-weight: 700;
+}
+#backlight {
+    border-radius: 25px;
+    font-weight: 600;
+}

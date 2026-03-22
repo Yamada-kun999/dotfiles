@@ -1,0 +1,135 @@
+@import "/home/dude/.config/rofi/wal.rasi"
+
+
+configuration {
+    show-icons: true;
+}
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       1400px;
+    height:                      300px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               10px;
+    cursor:                      "default";
+    background-color:            @background-alt;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            @background;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     0px 10px;
+    background-color:            @background;
+    text-color:                  @foreground;
+    orientation:                 horizontal;
+    children:                    [ "entry"];
+}
+
+entry {
+    enabled:                     true;
+    expand:                      false;
+    width:                       300px;
+    padding:                     0px 10px;
+    border-radius:               100%;
+    background-color:            @background;
+    text-color:                  @foreground;
+    cursor:                      text;
+    placeholder:                 "Witch One ¿¿";
+    placeholder-color:           inherit;
+}
+
+listbox {
+    spacing:                     4px;
+    padding:                     4px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+
+/** TODO fix scrolling listview orientation~scroll **/
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     4;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     3px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     0px;
+    border-radius:               5px;
+    background-color:            transparent;
+    text-color:                  wheat;
+    cursor:                      pointer;
+    orientation:                 horizontal;
+}
+
+
+element selected {
+    background-color:            @selected;
+    text-color:                  wheat;
+}
+element-icon {
+    size: 200px;
+    horizontal-align:            0.5;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    spacing:                     0px;
+    padding:                     35px;
+}
+element-text {
+    padding:                     -5px -180px;
+    horizontal-align: 0.0;
+    font: "Fira code";
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     15px;
+    border-radius:               15px;
+    background-color:            @background;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+

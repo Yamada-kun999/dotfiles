@@ -1,0 +1,58 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "width": 530,
+    "height": 40,
+    "margin-bottom": 7,
+    "margin-top": 0,
+    "modules-center": ["clock","hyprland/workspaces","network","backlight","battery"],
+
+
+    "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+},
+    "battery": {
+        "format": "{icon}",
+        "format-discharging": "{icon}",
+        "format-charging": "{capacity}% {icon}",
+        "format-plugged": "",
+        "format-icons": {
+        "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+        "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    }
+},
+    "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": [""]
+    },
+
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+
+    "network": {
+    "interface": "wlan0",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "",
+    "format-wifi": "{icon}",
+    "format-disconnected": "󰤮",
+    "max-length":50
+    
+    }
+}
